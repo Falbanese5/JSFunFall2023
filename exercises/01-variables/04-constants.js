@@ -5,3 +5,7 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+const PIE = 3.14
+
+console.log(PIE);

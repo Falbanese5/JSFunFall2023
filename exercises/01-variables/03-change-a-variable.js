@@ -6,3 +6,8 @@ let price = 5.99;
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+let inflationFactor = 3;
+
+price = (price * inflationFactor);
+console.log(price);
