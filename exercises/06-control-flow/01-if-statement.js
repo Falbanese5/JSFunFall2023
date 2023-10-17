@@ -17,3 +17,13 @@ let isBuyingDrink = true; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+if (isBuyingDrink)
+{
+    total = (burger + drink);
+    console.log(total);
+}
+else 
+{
+    total = burger;
+    console.log(total);
+}
