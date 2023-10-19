@@ -16,3 +16,22 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let lowerCaseString = (words) => 
+{
+    //console.log(words);
+    //console.log(typeof words);
+    if (typeof words === 'string') 
+    {
+        //console.log(words);
+        let str = words.toLowerCase();
+        //console.log(str);
+        return str;
+    }
+    // else
+    // {
+    //     return(`${words} is not a string!`);
+    // }
+}
+
+lowerCaseString("hello");
+//console.log(lowerCaseString(72));
