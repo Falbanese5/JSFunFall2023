@@ -4,3 +4,5 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let restaurants = ["Cho Cho San", "Sangria's", "Fogo De Chow"];
+console.log(restaurants);
