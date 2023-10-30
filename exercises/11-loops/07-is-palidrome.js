@@ -11,3 +11,28 @@ let string = "racecar";
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let isPalindrome = false;
+let seperated = string.split("");
+let reverse = [];
+console.log(seperated);
+for (let i = (string.length - 1); i >= 0; i--)
+{
+    //console.log(seperated[i])
+    reverse.push(seperated[i]);
+    //console.log(reverse);
+}
+
+let reversedString = (reverse.join(""));
+console.log(reversedString);
+
+if (reversedString === string)
+{
+    isPalindrome = !isPalindrome;
+}
+else
+{
+    console.log("Is Not a Palindrome");
+}
+
+console.log(isPalindrome);
+

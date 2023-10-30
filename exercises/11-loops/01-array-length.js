@@ -6,3 +6,12 @@ let planets = ["Pluto", "Saturn", "Mar"]; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let length = 0;
+
+while (length < planets.length)
+{
+    length++;
+    //console.log(length);
+}
+
+console.log(length);

@@ -7,3 +7,23 @@ let numbers = [10000, -8, 10, 0.7]; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let highest = -1000;
+
+for(let i = 0; i < numbers.length; i++)
+{
+    let num = numbers[i];
+    //console.log(num);
+    if(num > highest)
+    {
+        highest = num;
+        //console.log(highest);
+    }
+    else
+    {
+        //console.log(highest);
+    }
+
+}
+
+console.log(highest);
+//console.log("End");
