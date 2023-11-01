@@ -15,3 +15,7 @@ let student = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+student.name = "Francesco Albanese";
+student.skills.push("Gamer");
+ 
+console.log(student);

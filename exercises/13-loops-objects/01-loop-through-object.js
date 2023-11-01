@@ -17,3 +17,10 @@ const links = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let html = "";
+for (let [site, link] of Object.entries(links))
+{
+  html += `<a href="${link}">${site}</a>`;
+}
+
+console.log(html);
