@@ -24,10 +24,20 @@ const capitalizeString = (str) => {
  */
 const capitalizeArray = (originalArray, callback) => {
   // WRITE YOUR ANSWER IN HERE
+  let newArray = [];
+  for (let string of originalArray)
+  {
+    let newString = callback(string);
+    newArray.push(newString);
+    //console.log(string);
+  }
+
+  return newArray;
 };
 
 // Uncomment me to test your answer in Quokka
-// const result = capitalizeArray(['hello', 'world'], capitalizeString);
+const result = capitalizeArray(['hello', 'world'], capitalizeString);
+//console.log(result);
 
 // IGNORE THIS BELOW. It is for the tests.
 
