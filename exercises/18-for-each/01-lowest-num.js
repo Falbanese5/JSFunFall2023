@@ -9,3 +9,14 @@ const numbers = [1, 10, -2, 3, 4]; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const getLowest = (num, i, array)=>
+{
+    //console.log(num);
+    if (num < lowestNumber)
+    {
+        lowestNumber = num;
+        console.log(lowestNumber);
+    }
+}
+
+numbers.forEach(getLowest);
