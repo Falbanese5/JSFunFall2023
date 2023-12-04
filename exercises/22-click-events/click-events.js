@@ -17,4 +17,13 @@
    * 2. Change the text to say e.g. "Loading ..." once it is clicked.
    */
   // Write your answer here
+  const credit = document.querySelector("#credit-card");
+  console.log(credit);
+  const pay = () => 
+  {
+    credit.disabled = "disabled";
+    credit.textContent = "Loading...";
+  }
+
+  credit.addEventListener("click", pay);
 })();
