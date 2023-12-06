@@ -25,7 +25,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EXERCISES Creating Elements</title>
-
     <!--
       Optional: Add any CSS libraries or your own CSS here. For example:
       @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link for external files
@@ -35,4 +34,18 @@
   <body>
     <!-- Put your HTML here -->
   </body>
+
+  <script>
+      const button = document.createElement("button");
+      button.textContent = "Click Me!";
+      document.querySelector("body").appendChild(button);
+
+
+      button.addEventListener("click", (event) =>
+  {
+    //event.preventDefault();
+    console.log("Checked");
+    button.textContent = "You clicked me YAY!";
+  })
+  </script>
 </html>
