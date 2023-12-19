@@ -8,4 +8,26 @@
    * This is the API you will be using. The method will be GET.
    * https://ron-swanson-quotes.herokuapp.com/v2/quotes
    */
+
+  const getQuote = document.querySelector("#button");
+  const quoteLine = document.querySelector("#quote");
+
+  getQuote.addEventListener("click", (event) =>
+      {
+        event.preventDefault();
+        
+         (async () => {
+          try
+          {
+            let response = await axios.get("https://ron-swanson-quotes.herokuapp.com/v2/quotes");
+            quoteLine.textContent = response.data;
+            console.log(response.data)
+          }catch (err) 
+          {
+            return console.error('Error:', err);
+          }
+      
+      
+        })();
+        })
 })();
