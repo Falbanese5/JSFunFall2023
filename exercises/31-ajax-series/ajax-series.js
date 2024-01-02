@@ -17,4 +17,42 @@
    *
    * You must make two AJAX request to solve this problem.
    */
+
+  const dropdown = document.querySelector("#dropdown");
+  let characters;
+
+  axios
+  ({
+    method: "GET",
+    url: "https://rickandmortyapi.com/api/character/",
+  })
+  .then((response) => 
+  {
+    characters = response.data.results;
+    characters.forEach((character) => 
+    {
+      const option = document.createElement("option");
+      option.value = character.id; // I'm going to use this when I lookup when character the user selects
+      option.textContent = character.name;
+      dropdown.appendChild(option);
+    });
+
+    dropdown.addEventListener("change", (event) => 
+    {
+      const id = parseInt(event.target.value);
+
+      const character = characters.find((character) => 
+      {
+        return character.id == id;
+      });
+
+      document.querySelector("#title-head").textContent = character.name;
+      document.querySelector("#get-schwifty").src = character.image;
+    });
+  })
+  .catch((error) => 
+  {
+    // Usually, you should display an error message on the screen inside of doing console.error
+    console.error(error);
+  });
 })();

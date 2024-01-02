@@ -41,4 +41,60 @@
    *   </td>
    * </tr>
    */
+
+  const addProductBtn = document.querySelector("#addProductBtn");
+  const table = document.querySelector("#productTableBody");
+  //let data;
+
+  fetch("https://dummyjson.com/products")
+  .then((res) => res.json())    
+  .then((data) => 
+  {
+    data.products.forEach((elements) => 
+    {
+      console.log(elements)
+      const html = `<tr data-id="${elements.id}">>
+       <td>${elements.id}</td>
+       <td>${elements.title}</td>
+       <td>${elements.description}</td>
+       <td>${elements.price.toFixed(2)}</td>
+       <td>${elements.discountPercentage}</td>
+       <td>${elements.rating.toFixed(2)}</td>
+       <td>${elements.stock}</td>
+       <td>${elements.brand}</td>
+       <td>${elements.category}</td>
+       <td>
+          <button class="btn btn-danger btn-sm delete-product-btn">Delete</button>
+        </td>
+      </tr>`;
+      table.innerHTML += html;
+    });
+    
+    const deleteButtons = document.querySelectorAll(".delete-product-btn");
+    deleteButtons.forEach((button) =>
+    {
+      button.addEventListener("click", () => 
+      { 
+        const id = button.id.replace("row-", "");
+        fetch('https://dummyjson.com/products/' + id, 
+        {
+          method: 'DELETE',
+        })
+        .then(res => res.json())
+        .then(() => 
+        {
+
+          const row = document.querySelector(`#elements-${id}`);
+          row.remove();
+        })
+      
+      })
+    })
+  })
+ .catch((error) => 
+ {
+    console.error(error);
+ });
+
+
 })();
